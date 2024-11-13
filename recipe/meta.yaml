@@ -1,5 +1,5 @@
 {% set name = "python_jsonschema_objects" %}
-{% set version = "0.5.6" %}
+{% set version = "0.5.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python_jsonschema_objects-{{ version }}.tar.gz
-  sha256: 772c6f8341a9e90d6ed70c00678e2f943db7911e64d54fb0dc68f6084aafa6d2
+  sha256: 0af1a9fd207a3158a73baa895256ce0ee91bb99c5f92b07fd4fac6ff6d007c90
 
 build:
   noarch: python
