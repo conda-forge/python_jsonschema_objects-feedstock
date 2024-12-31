@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python_jsonschema_objects-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/python_jsonschema_objects-{{ version }}.tar.gz
   sha256: 0af1a9fd207a3158a73baa895256ce0ee91bb99c5f92b07fd4fac6ff6d007c90
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=18.0.0
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - inflection >=0.2
     - markdown >=2.4
     - jsonschema >=4.18
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://python-jsonschema-objects.readthedocs.org/
