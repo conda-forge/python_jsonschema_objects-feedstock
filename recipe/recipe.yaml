@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: python_jsonschema_objects
-  version: "0.5.7"
+  version: 0.5.7
 
 package:
   name: ${{ name|lower }}
@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools >=18.0.0
     - pip
   run:
